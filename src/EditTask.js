@@ -8,7 +8,7 @@ export default function EditTask() {
   let params = useParams()
  useEffect(() => {
   async function fetchData(){
-    let userData = await axios.get(`http://localhost:3001/task/${params.id}`)
+    let userData = await axios.get(`https://task-raftlab-edh.onrender.com/task/${params.id}`)
     formik.setValues(userData.data)
   }
   fetchData();
@@ -24,7 +24,7 @@ export default function EditTask() {
       onSubmit: (values) => {
           // alert(JSON.stringify(values, null, 2));
         try {
-          axios.put(`http://localhost:3001/task-update/${params.id}`,values);
+          axios.put(`https://task-raftlab-edh.onrender.com/task-update/${params.id}`,values);
           navigate("/");
         } catch (error) {
           console.log(error);

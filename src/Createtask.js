@@ -16,7 +16,7 @@ export default function Createtsk() {
     onSubmit: (values) => {
       //   alert(JSON.stringify(values, null, 2));
       try {
-        axios.post("http://localhost:3001/create-task",values);
+        axios.post("https://task-raftlab-edh.onrender.com/create-task",values);
         navigate("/");
       } catch (error) {
         console.log(error);

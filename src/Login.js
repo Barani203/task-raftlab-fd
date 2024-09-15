@@ -13,7 +13,7 @@ export default function Login() {
     onSubmit: async (values) => {
       //   alert(JSON.stringify(values, null, 2));
       try {
-        let loginData= await axios.post("http://localhost:3001/login",values);
+        let loginData= await axios.post("https://task-raftlab-edh.onrender.com/login",values);
         // window.localStorage.setItem("my_token",loginData.data.token)
         // alert("login success");
         navigate("/");

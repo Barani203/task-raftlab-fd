@@ -12,7 +12,7 @@ export default function TaskView() {
   }, []);
 
   let fetchUsers = async () => {
-    let userData = await axios.get("http://localhost:3001/task");
+    let userData = await axios.get("https://task-raftlab-edh.onrender.com/task");
     console.log(userData.data);
     setUserList(userData.data);
   };
@@ -21,7 +21,7 @@ export default function TaskView() {
     try {
       let result = window.confirm("Are you sure do you want to delete ?");
       if (result) {
-        await axios.delete(`http://localhost:3001/task/${id}`);
+        await axios.delete(`https://task-raftlab-edh.onrender.com/task/${id}`);
         alert("Task  deleted");
         fetchUsers();
       }
