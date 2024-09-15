@@ -14,7 +14,7 @@ export default function Login() {
       //   alert(JSON.stringify(values, null, 2));
       try {
         let loginData= await axios.post("https://task-raftlab-edh.onrender.com/login",values);
-        // window.localStorage.setItem("my_token",loginData.data.token)
+        window.localStorage.setItem("my_token",loginData.data.token)
         // alert("login success");
         navigate("/");
       } catch (error) {

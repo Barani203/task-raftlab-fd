@@ -12,7 +12,7 @@ export default function EditTask() {
     formik.setValues(userData.data)
   }
   fetchData();
- }, [])
+ }, )
  
     const navigate = useNavigate();
     const formik = useFormik({

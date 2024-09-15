@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom';
+
 
 
 export default function Search() {
-    let params = useParams()
+   
     const [query, setQuery]=useState('');
     const[results,setResults]=useState([])
     const handleSearch = async()=>{
